@@ -6,9 +6,11 @@ import sbt._
 object $name;format="word-only,upper-camel"$Plugin extends AutoPlugin {
   override def trigger: PluginTrigger = allRequirements
 
+  // scalastyle:off object.name
   object autoImport {
     val $task$ = taskKey[Unit]("run $task$")
   }
+  // scalastyle:on object.name
 
   import autoImport._
 
